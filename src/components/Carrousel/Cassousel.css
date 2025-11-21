@@ -1,0 +1,143 @@
+p {
+  color: #fff;
+}
+
+.carrousel-container {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.circles {
+  background-image: url("../../assets/icons/Circles.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120vh;
+  overflow: hidden;
+}
+
+.carrousel-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  color: #fff;
+  margin: 8em 0em;
+
+}
+
+.phone {
+  width: 30%;
+  height: 400px;
+  margin: 0em 2em;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  gap: 2em;
+  margin-right: 1em;
+}
+
+.text h4 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.text p {
+  font-size: 32px;
+}
+
+.screen-changer {
+  display: flex;
+  justify-content: center;
+}
+.button-container {
+  width: 190px;
+  height: 50px;
+  background: #3c3535;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.button-container::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 120%;
+  background: linear-gradient(180deg, #FC2EAD, #B10003);
+  animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.button-container::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: #3c3535;
+  border-radius: 15px;
+}
+.button-screen {
+  z-index: 2;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: white;
+  font-size: 20px;
+}
+
+@media (max-width: 441px) {
+  .carrousel-container {
+    display: flex;
+    flex-direction: column;
+    height: 140vh;
+  }
+
+  .circles {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carrousel {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 5em 0em;
+  }
+
+  .text {
+    gap: 10px;
+  }
+
+  .text h4 {
+    font-size: 32px;
+  }
+
+  .text p {
+    font-size: 24px;
+  }
+
+  .phone {
+    width: 100%;
+    height: 720px;
+  }
+}

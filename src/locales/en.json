@@ -1,0 +1,64 @@
+{
+  "intro": {
+    "para": "Welcome to CoreLify: organize habits, finances and collaboration."
+  },
+
+  "navbar": {
+    "opc1": "Home",
+    "opc2": "Information",
+    "opc3": "Sign Up"
+  },
+
+  "hero": {
+    "title": "CoreLify",
+    "subtitle": "The future of personal and group management",
+    "button": "Sign up now!"
+  },
+
+  "cards": {
+    "title": "Why CoreLify?",
+    "card1": {
+      "title": "Simplicity and accessibility",
+      "text": "CoreLify offers an intuitive and accessible interface. Our features cover the essentials to organize habits, finances, and teamwork without unnecessary complexity."
+    },
+    "card2": {
+      "title": "Power",
+      "text": "At the same time, CoreLify is a powerful tool for managing habits and finances, designed for both individual users and groups."
+    },
+    "card3": {
+      "title": "Communication and versatility",
+      "text": "CoreLify is not just a private space; it also includes group collaboration options and communication tools built for effective coordination."
+    }
+  },
+
+  "features": {
+    "screen1": {
+      "title": "Easy to use!",
+      "text": "Sign up in just a few steps, access your data, and get clear insights in minutes."
+    },
+    "screen2": {
+      "title": "Protect your information!",
+      "text": "Manage your data securely. Access analysis tools and configurable alerts to help you stay in control."
+    },
+    "screen3": {
+      "title": "Track your activities!",
+      "text": "Our system lets you add descriptions and images to your activities and measure the time spent on each one —individually or in groups— with an integrated timer."
+    }
+  },
+
+  "news": {
+    "title": "Sign up for updates!",
+    "text": "Subscribe to receive news about updates and improvements to the app.",
+    "button": "Subscribe",
+    "form": {
+      "input1": "Email",
+      "input2": "First name"
+    },
+    "rightContainer": {
+      "intro": "Many people struggle to organize different aspects of their lives: personal habits, finances, and group coordination. While some apps address one of these areas, few bring them all together in a single experience. From that gap, CoreLify was born.",
+      "feat1": "It only requires an internet connection for the features that truly need it. Enjoy a simple, efficient, and elegant app designed to avoid overwhelming tools.",
+      "feat2": "CoreLify is an integrated, collaborative, and flexible space, adaptable to both individual and group situations.",
+      "feat3": "Track your habits, prioritize activities, and connect them with the time and financial resources you invest. Receive reports and easy-to-read charts to make better decisions."
+    }
+  }
+}

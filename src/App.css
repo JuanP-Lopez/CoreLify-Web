@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Titles";
+  src: url("./assets/fonts/Poppins-Bold.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Subtitles";
+  src: url("./assets/fonts/Nunito-Bold.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Subtitles-Regular";
+  src: url("./assets/fonts/Nunito-Regular.ttf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: "Text";
+  src: url("./assets/fonts/Inter-Regular.ttf");
+}
+
+:root {
+  --font-title: "Titles", sans-serif;
+  --font-subtitle: "Subtitles", sans-serif;
+  --font-subtitle_2: "Subtitles-Regular", sans-serif;
+  --font-text: "Text", sans-serif;
+}
+
+h1, h2 {
+  font-family: var(--font-title)
+}
+
+h3, h4, li {
+  font-family: var(--font-subtitle);
+}
+
+button {
+  font-family: var(--font-subtitle_2)
+}
+
+p {
+  font-family: var(--font-text)
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  margin-top: 2em;
+}
+
+footer {
+  padding: 1em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background-color: #282727;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 441px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
   }
 }
