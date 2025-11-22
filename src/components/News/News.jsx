@@ -6,18 +6,18 @@ import Slider from "./Slider";
 function News() {
   const { t } = useLanguage();
 
-  const [nombre, setNombre] = useState("");
-  const [correo, setCorreo] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = {correo, nombre};
+    const data = { email, name };
 
     try {
       const res = await fetch("https://backend-vdsr.onrender.com/api/news", {
         method : "POST",
-        headers : { "ContentType": "application/json" },
+        headers : { "Content-Type": "application/json" },
         body : JSON.stringify(data),
       });
 
@@ -38,8 +38,8 @@ function News() {
           <div className="input">
             <input
               type="text"
-              value={correo}
-              onChange={(e) => setCorreo(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="input-form"
               placeholder={t("news.form.input1")}
             />
@@ -47,8 +47,8 @@ function News() {
           <div className="input">
             <input
               type="text"
-              value={nombre}
-              onChange={(e) => setNombre(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="input-form"
               placeholder={t("news.form.input2")}
             />
