@@ -24,8 +24,8 @@ function News() {
       const result = await response.JSON();
       console.log("Respuesta del servidor: ", result);
 
-    } catch (err) {
-      console.log("Error al enviar: ", err)
+    } catch (error) {
+      console.log("Error al enviar: ", error)
     }
   };
 
