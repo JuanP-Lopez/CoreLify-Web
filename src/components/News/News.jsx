@@ -6,14 +6,28 @@ import Slider from "./Slider";
 function News() {
   const { t } = useLanguage();
 
-  const [nombre, setNombre ] = useState("");
+  const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Correo: ", correo)
-    console.log("Nombre: ", nombre);
-  }
+
+    const data = {correo, nombre};
+
+    try {
+      const res = await fetch("https://backend-vdsr.onrender.com/api/news", {
+        method : "POST",
+        headers : { "ContentType": "application/json" },
+        body : JSON.stringify(data),
+      });
+
+      const result = await Response.JSON();
+      console.log("Respuesta del servidor: ", result);
+
+    } catch (err) {
+      console.log("Error al enviar: ", err)
+    }
+  };
 
   return (
     <div className="news-container">
@@ -21,29 +35,30 @@ function News() {
         <h3>{t("news.title")}</h3>
         <p>{t("news.text")}</p>
         <form onSubmit={handleSubmit} className="form">
-  <div className="input">
-    <input
-      type="text"
-      value={correo}
-      onChange={(e) => setCorreo(e.target.value)}
-      className="input-form"
-      placeholder={t("news.form.input1")}
-    />
-  </div>
-  <div className="input">
-    <input
-      type="text"
-      value={nombre}
-      onChange={(e) => setNombre(e.target.value)}
-      className="input-form"
-      placeholder={t("news.form.input2")}
-    />
-  </div>
-  <div className="button-border">
-    <button type="submit" className="button-form">{t("news.button")}</button>
-  </div>
-</form>
-
+          <div className="input">
+            <input
+              type="text"
+              value={correo}
+              onChange={(e) => setCorreo(e.target.value)}
+              className="input-form"
+              placeholder={t("news.form.input1")}
+            />
+          </div>
+          <div className="input">
+            <input
+              type="text"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              className="input-form"
+              placeholder={t("news.form.input2")}
+            />
+          </div>
+          <div className="button-border">
+            <button type="submit" className="button-form">
+              {t("news.button")}
+            </button>
+          </div>
+        </form>
       </div>
       <div className="news-info">
         <Slider />

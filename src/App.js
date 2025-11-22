@@ -1,4 +1,4 @@
-import React, { useRef } from "react"; 
+import React, { useRef } from "react";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import "./App.css";
 
@@ -27,14 +27,16 @@ function App() {
       info: infoRef,
       form: formRef,
     };
-    scrollMap[ref]?.current?.scrollIntoView({behavior: "smooth"});
+    scrollMap[ref]?.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div>
       <LanguageProvider>
         <Navbar scrollSection={scroll} />
-        <Hero ref={homeRef} />
+        <section ref={homeRef}>
+          <Hero />
+        </section>
         <CardsHeader />
         <div className="cards" ref={infoRef}>
           <Card icon={Happy} title="cards.card1.title" text="cards.card1.text" variant="red" />
@@ -43,7 +45,7 @@ function App() {
         </div>
         <Carrousel />
         <section ref={formRef}>
-          <News/>
+          <News />
         </section>
         <footer >
           <h3>CoreLify</h3>
