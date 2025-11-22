@@ -21,7 +21,7 @@ function News() {
         body : JSON.stringify(data),
       });
 
-      const result = await response.JSON();
+      const result = await res.JSON();
       console.log("Respuesta del servidor: ", result);
 
     } catch (error) {
