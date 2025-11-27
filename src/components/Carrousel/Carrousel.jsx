@@ -12,17 +12,27 @@ function Carrousel() {
     {
       title: t("features.screen1.title"),
       text: t("features.screen1.text"),
-      texture: "/images/Pantalla1-Inicio-Habits.png",
+      texture: "/images/Pantalla2-Login.svg",
+    },
+    {
+      title: t("features.screen1.title"),
+      text: t("features.screen1.text"),
+      texture: "/images/PantallaRegister.svg",
     },
     {
       title: t("features.screen2.title"),
-      text: t("features.screen2.text"),
-      texture: "/images/Pantalla2-Login.png",
+      text: t("features.screen1.text"),
+      texture: "/images/PantallaPerfil.svg",
+    },
+    {
+      title: t("features.screen2.title"),
+      text: t("features.screen1.text"),
+      texture: "/images/PantallaNoti.png",
     },
     {
       title: t("features.screen3.title"),
       text: t("features.screen3.text"),
-      texture: "/images/PantallaRegister.png",
+      texture: "/images/Pantalla1-Inicio-Habits.svg",
     },
   ];
 

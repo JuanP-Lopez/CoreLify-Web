@@ -9,24 +9,49 @@ function News() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const [err, setErr] = useState({});
+
+  const validar = () => {
+    const newErr = {};
+
+    if (!email) {
+      newErr.email = "Necessary";
+    } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/.test(email)) {
+      newErr.email = "Needs format";
+    }
+
+    if (!name.trim()) {
+      newErr.name = "Necessary";
+    }
+
+    setErr(newErr);
+
+    return Object.keys(newErr).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validar()) return;
 
     const data = { email, name };
 
     try {
       const res = await fetch("https://backend-vdsr.onrender.com/api/news", {
-        method : "POST",
-        headers : { "Content-Type": "application/json" },
-        body : JSON.stringify(data),
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
 
       const result = await res.json();
       console.log("Respuesta del servidor: ", result);
-
     } catch (error) {
-      console.log("Error al enviar: ", error)
+      console.log("Error al enviar: ", error);
     }
+
+    setEmail("");
+    setName("");
+    setErr({});
   };
 
   return (
@@ -38,21 +63,25 @@ function News() {
           <div className="input">
             <input
               type="text"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="input-form"
               placeholder={t("news.form.input1")}
             />
           </div>
+          {err.email && <span>{err.email}</span>}
           <div className="input">
             <input
               type="text"
+              required
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="input-form"
               placeholder={t("news.form.input2")}
             />
           </div>
+          {err.name && <span>{err.name}</span>}
           <div className="button-border">
             <button type="submit" className="button-form">
               {t("news.button")}
