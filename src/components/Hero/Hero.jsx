@@ -19,10 +19,11 @@ function Hero() {
           <img className="hero-image" src={CoreLifyScreens} alt="Visual CoreLify" />
         </div>
       </div>
-
+      {/*
       <div className="hero-btn-container">
         <button className="hero-button">{t("hero.button")}</button>
       </div>
+      */}
     </div>
   );
 }
