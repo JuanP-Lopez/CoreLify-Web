@@ -16,10 +16,10 @@
   - Responsive UI *(Coming soon)*
   </em>
 
-  <a href='https://aeromm.vercel.app'>Access to AeroMailManagement by clicking this text.</a>
+  <a href='https://aeromm.vercel.app'>Access to CoreLify by clicking this text.</a>
 
 </p>
-<h3 align="center">Tech Stack used in AeroMailManagement</h3>
+<h3 align="center">Tech Stack used in CoreLify</h3>
 <hr>
 
 ### 🔠 Languages
