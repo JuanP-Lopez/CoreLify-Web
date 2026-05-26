@@ -11,6 +11,7 @@
   CoreLify is a promotional web system for CoreLify project.
 
   ## Features
+  - Spanish/English translation
   - 3D rendering
   - Responsive UI *(Coming soon)*
   </em>
